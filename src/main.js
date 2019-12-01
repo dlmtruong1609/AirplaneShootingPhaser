@@ -1,3 +1,5 @@
+import Scene1 from './scene/scene1'
+import Scene2 from './scene/scene2'
 const config = {
     width: 256,
     height: 272,
@@ -8,11 +10,12 @@ const config = {
         arcade: {
             debug: false
         }
+    },
+    gameSettings: {
+        playerSpeed: 200,
     }
-}
-const gameSettings = {
-    playerSpeed: 200,
 }
 window.onload = () => {
     let game = new Phaser.Game(config);
 }
+export default config

@@ -1,40 +1,41 @@
-class Scene1 extends Phaser.Scene {
+import Phaser from 'phaser'
+export default class Scene1 extends Phaser.Scene {
     constructor() {
         super("bootGame");
     }
     preload() {
-        this.load.image("background", "assets/images/background.png");
+        this.load.image("background", "../../assets/images/background.png");
 
-        this.load.spritesheet("ship", "assets/images/ship.png", {
+        this.load.spritesheet("ship", "../../assets/images/ship.png", {
             frameWidth: 16,
             frameHeight: 16
         });
-        this.load.spritesheet("ship2", "assets/images/ship2.png", {
+        this.load.spritesheet("ship2", "../../assets/images/ship2.png", {
             frameWidth: 32,
             frameHeight: 16
         });
-        this.load.spritesheet("ship3", "assets/images/ship3.png", {
+        this.load.spritesheet("ship3", "../../assets/images/ship3.png", {
             frameWidth: 32,
             frameHeight: 32
         });
-        this.load.spritesheet("explosion", "assets/images/explosion.png", {
+        this.load.spritesheet("explosion", "../../assets/images/explosion.png", {
             frameWidth: 16,
             frameHeight: 16
         });
-        this.load.spritesheet("power-up", "assets/images/power-up.png", {
+        this.load.spritesheet("power-up", "../../assets/images/power-up.png", {
             frameWidth: 16,
             frameHeight: 16
         });
-        this.load.spritesheet("player", "assets/images/player.png", {
+        this.load.spritesheet("player", "../../assets/images/player.png", {
             frameWidth: 16,
             frameHeight: 24
         });
-        this.load.spritesheet("beam", "assets/images/beam.png", {
+        this.load.spritesheet("beam", "../../assets/images/beam.png", {
             frameWidth: 16,
             frameHeight: 16
         });
 
-        this.load.audio("audio_beam", "assets/sounds/Flashpoint001a.mp3");
+        this.load.audio("audio_beam", "../../assets/sounds/Flashpoint001a.mp3");
         // or
         // this.load.audio("audio_beam", ["assets/sounds/Flashpoint001a.ogg", "assets/sounds/Flashpoint001a.mp3"]);
 

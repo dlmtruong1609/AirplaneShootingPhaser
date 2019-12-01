@@ -1,4 +1,4 @@
-class Beam extends Phaser.GameObjects.Sprite {
+export default class Beam extends Phaser.GameObjects.Sprite {
     constructor(scene) {
 
         let x = scene.player.x;

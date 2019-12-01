@@ -1,4 +1,7 @@
-class Scene2 extends Phaser.Scene {
+import config from '../main'
+import Explosion from '../entities/explosion'
+import Beam from '../entities/beam'
+export default class Scene2 extends Phaser.Scene {
     constructor() {
         super("playGame");
     }
@@ -167,16 +170,16 @@ class Scene2 extends Phaser.Scene {
     }
     movePlayerManager() {
         if(this.cursorKeys.left.isDown) {
-            this.player.setVelocityX(-gameSettings.playerSpeed);
+            this.player.setVelocityX(-config.gameSettings.playerSpeed);
         } else if(this.cursorKeys.right.isDown) {
-            this.player.setVelocityX(gameSettings.playerSpeed);
+            this.player.setVelocityX(config.gameSettings.playerSpeed);
         } else {
             this.player.setVelocityX(0);
         }
         if(this.cursorKeys.up.isDown) {
-            this.player.setVelocityY(-gameSettings.playerSpeed);
+            this.player.setVelocityY(-config.gameSettings.playerSpeed);
         } else if(this.cursorKeys.down.isDown) {
-            this.player.setVelocityY(gameSettings.playerSpeed);
+            this.player.setVelocityY(config.gameSettings.playerSpeed);
         } else {
             this.player.setVelocityY(0);
         }
